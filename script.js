@@ -34,10 +34,22 @@ function operate(a, b, operator){
 }
 
 const container = document.querySelector(".container");
-const symbols = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '=', '+', '*', '/', 'AC'];
+const symbols = ['AC', '+/-', '%', '/', '7', '8', '9', '*', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
+const classMap = {
+    "/": "divide",
+    "*": "multiply",
+    "-": "subtract",
+    "+": "add",
+    "=": "equals",
+    ".": "dot",
+    "%": "percent",
+    "+/-": "plus-minus",
+    "AC": "clear"
+};
 symbols.map(item => {
     let btn = document.createElement("button");
-    btn.className = item;
+    let className = 'btn-' + (classMap[item] || item);    
+    btn.className = className;
     btn.textContent = item;
     container.appendChild(btn);
 });
