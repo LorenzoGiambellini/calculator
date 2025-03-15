@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    background-color: rgb(202, 213, 180);
+    height: 550px;
+    width:400px;
+}
+.display {
+    background-color: white;
+    height: 100px;
+    margin  : 10px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+}
