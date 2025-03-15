@@ -51,11 +51,10 @@ symbols.map(item => {
     container.appendChild(btn);
 });
 
-
+const display = document.querySelector(".display");
 let a = '';
 let b = '';
 let operator = '';
-let minus = false; // positive by default
 const button = document.querySelectorAll("button");
 button.forEach(button => {
     button.addEventListener("click", () => {
@@ -120,19 +119,12 @@ button.forEach(button => {
                 break;
             case "btn-equals":
                 result = operate(Number(b), Number(a), operator);
+                display.textContent = result;
                 console.log(result);
                 a = result.toString();
                 break;
             case "btn-plus-minus":
-                if(minus == false) {
-                    a = '-' + a;
-                    minus = true;
-                }
-                else {
-                    a = a.slice(1);
-                    minus = false;
-                }
-                console.log(a);
+                a = (Number(a)*(-1)).toString();
         }
     });   
 })
