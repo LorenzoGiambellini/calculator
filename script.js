@@ -58,6 +58,17 @@ let operator = '';
 const button = document.querySelectorAll("button");
 
 button.forEach(button => {
+    button.addEventListener("mouseover", () => {
+        button.style.backgroundColor = "#ccc"; 
+        button.style.fontSize = "27px"; 
+    });
+
+    button.addEventListener("mouseout", () => {
+        button.style.backgroundColor = ""; // Ripristina il colore originale (definito nel CSS)
+        button.style.fontSize = "";        // Ripristina la dimensione originale del font
+      });
+    
+    
     button.addEventListener("click", () => {
         switch(button.className) {
             default:
