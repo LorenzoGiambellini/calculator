@@ -101,9 +101,9 @@ button.forEach(button => {
                 a = (Number(a)*(-1)).toString();
         }
         if(a === ''){
-            display.textContent = Number(b);
+            display.textContent = Number(b).toString().slice(0, 9);
         } else {
-            display.textContent = Number(a);
+            display.textContent = Number(a).toString().slice(0, 9);
         }
     });   
 })

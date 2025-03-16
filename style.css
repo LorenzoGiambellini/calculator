@@ -5,6 +5,7 @@ body {
     align-items: center;
     margin: 0;
     background-color: #FDFBEE;
+ 
 }
 
 .container {
@@ -13,8 +14,11 @@ body {
     height: 600px;
     width:385px;
     border-radius: 15px;
+    border: 2px solid black;   
+   
 }
 .display {
+    display: flex;
     background-color: #015551;
     height: 100px;
     margin: 10px;
@@ -23,7 +27,8 @@ body {
     color: #FDFBEE;
     font-family: 'Press Start 2P', sans-serif;
     border-radius: 5px;
- 
+    align-items: center ;
+    justify-content: flex-end;
 }
 
 button {
@@ -35,9 +40,26 @@ button {
     font-family: 'Digital-7', sans-serif;
     font-weight: bold;
     border-radius: 30px;
-
 }
 
 .btn-0 {
     width: 185px;
 }
+
+.btn-clear {
+    background-color: #FE4F2D;
+    color: #FDFBEE;
+}
+
+
+.footer {
+    background-color: #015551;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 13px;
+  }
